@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- let the browser know this is an HTML file -->
+<html>
+   <!-- everything else is enclosed in html tags -->
+   <head>
+      <!-- the head is for metadata prior to building the page -->
+      <!-- define the character set -->
+      <meta charset='utf-8' />
+      <!-- the title of the page which will show up in the browser bar -->
+      <title>Map Test</title>
+      <!-- discourage the browser from caching the page -->
+      <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate' />
+      <meta http-equiv='Pragma' content='no-cache' />
+      <meta http-equiv='Expires' content='0' />
+      <!-- tells mobile devices how to scale the page -->
+      <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+      <!-- stylesheet links -->
+      <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+      <link href='style.css' rel='stylesheet' />
+      <!-- javascript links -->
+      <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+      <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+      <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+      <style>
+         body { margin: 0; padding: 0; }
+      </style>
+   </head>
+   <body>
+      <!-- visible structure of page begins here -->
+      <div id="map"></div>
+      <div id="features">
+         <section id="germany" onclick="onClickDiv('germany'); ">
+            <h3>Germany, Polycarbonate</h3>
+            <p>
+               Polycarbonates were first discovered in 1898 by Alfred Einhorn, a German scientist.  However, after 30 years' laboratory research, this class of materials was abandoned without commercialization. Today almost 120,000 jobs in Germany are related to the production and consumption of polycarbonate.
+            </p>
+         </section>
+         <section id="russia" onclick="onClickDiv('russia'); ">
+            <h3>Russia (Nickel)</h3>
+            <p>
+               Nornickel is the largest Nickel mining and smelting company in Russia and also the largest industrial polluter. 1.9 million tonnes of sulfur dioxide is released into the air annually as of 2020,  accounting for 1.9% of global emissions. Ore is smelted on site in Norilsk.
+
+
+            </p>
+         </section>
+         <section id="china" onclick="onClickDiv('china'); ">
+            <h3>China (Silicon)</h3>
+            <p>
+              The slashing of output in China, far and away the world’s biggest silicon producer, is the result of efforts to reduce power consumption. Silicon, which makes up 28% of the earth’s crust by weight, is one of mankind’s most diverse building blocks. It’s used in everything from computer chips and concrete, to glass and car parts.
+            </p>
+         </section>
+         <section id="africa" onclick="onClickDiv('africa'); ">
+            <h3>Africa (Chromite)</h3>
+            <p>
+               South Africa produced an estimated 7,417,329 t of chromium ore in 2003. Samancor is the world’s largest integrated ferrochrome producer. However, according to a recent report, South Africa’s chromium industry is under threat from Chinese ferrochrome production, despite China having no chrome reserves of its own.
+            </p>
+         </section>
+         <section id="canada" onclick="onClickDiv('canada'); ">
+            <h3>Canada (Aluminum)</h3>
+            <p>
+              Canada’s aluminum industry began at the turn of the 20th century and grew quickly during both World Wars. Today, Canada is the world’s fourth largest producer and second largest exporter of aluminum. Aluminum production uses large amounts of electricity. For this reason, the Canadian industry took root in Quebec, where renewable hydroelectric energy could be harnessed at low cost.
+            </p>
+         </section>
+         <section id="china1" onclick="onClickDiv('china1'); ">
+            <h3>China (Production)</h3>
+            <p>
+            Given the abundance of Chinese products in the marketplace, it's understandable consumers might wonder why so many goods are made in China.  Abundance of lower-wage workers available in the country, China has been accused of artificially depressing the value of its currency in order to keep the price of its goods lower than those produced by U.S. competitors.
+            </p>
+         </section>
+      </div>
+      <!-- load additional javascript -->
+      <script src='map.js'></script>
+   </body>
+</html>
